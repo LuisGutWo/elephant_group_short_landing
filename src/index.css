@@ -10,14 +10,15 @@ body {
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #160c3d;
+  background: #131313;
+  background-image: linear-gradient(to right, #131313 0%, #131313 0%, #131313 21%, #222222 52%, #141414 78%, #131313 100%);
   overflow: hidden;
   display: block;
 
   /* Colors */
   --brand-color: hsl(46, 100%, 50%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 5%);
+  --white: hsl(0, 26%, 96%);
   /* Fonts */
   --font-title: 'Montserrat', sans-serif;
   --font-text: 'Lato', sans-serif;

@@ -75,7 +75,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="line-scale-pulse-out" />
+      <Loader type="ball-clip-rotate-multiple" />
     </>
   )
 }
