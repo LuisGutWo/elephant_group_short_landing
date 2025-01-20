@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   font: 300 11px/1.4 'Helvetica Neue', sans-serif;
   color: #444;
@@ -16,7 +17,7 @@ body {
   display: block;
 
   /* Colors */
-  --brand-color: hsl(46, 100%, 50%);
+  --brand-color: #d0941c;
   --black: hsl(0, 0%, 5%);
   --white: hsl(0, 26%, 96%);
   /* Fonts */
@@ -26,6 +27,6 @@ body {
 
 @media (width <=1200px) {
   body {
-    overflow: visible;
+    overflow: hidden;
   }
 }
