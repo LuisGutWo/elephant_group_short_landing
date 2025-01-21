@@ -1,7 +1,8 @@
-$primary-color: #d0941c  ;
+$primary-color: #d0941c;
 
 @import '~loaders.css/src/animations/ball-clip-rotate-multiple.scss';
 @import 'animate.css';
+@import '~bootstrap/scss/bootstrap';
 
 @keyframes move {
   100% {
@@ -33,9 +34,22 @@ $primary-color: #d0941c  ;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: url('./assets/fonts/Avenir-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('./assets/fonts/Avenir.ttc') format('ttc');
+  font-weight: normal;
+  font-style: normal;
+}
+
 input,
 textarea {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Avenir-Roman', sans-serif;
 }
 
 .loader-hidden {
@@ -59,6 +73,3 @@ textarea {
   animation-fill-mode: forwards;
   transform: scale(1.3);
 }
-
-
-
