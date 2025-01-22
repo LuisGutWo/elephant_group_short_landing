@@ -4,20 +4,9 @@
   position: absolute;
 }
 
-.container {
-  width: 100%;
-  will-change: contents;
-  height: 100%;
-  min-height: 566px;
-  position: absolute;
-  opacity: 0;
-  top: 5%;
-  margin: 0 auto;
-  z-index: 1;
-  transform-style: preserve-3d;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
-}
+//  
+
+
 
 .container.contact-page,
 .container.about-page,
@@ -26,7 +15,7 @@
   h1 {
     font-size: 48px;
     font-family: 'Avenir-Roman';
-    color: #ffd700;
+    color: #fff;
     font-weight: 400;
     margin-top: 0;
     position: relative;
@@ -68,60 +57,8 @@
 
   .text-animate-hover {
     &:hover {
-      color: #fff;
+      color: #d0941c;
     }
   }
 }
 
-@media (max-width: 1200px) {
-  .page {
-    position: initial;
-  }
-
-  .container {
-    position: initial;
-    height: auto;
-    min-height: auto;
-
-    &.contact-page,
-    &.about-page,
-    &.portfolio-page {
-      .text-zone {
-        position: initial;
-        transform: none;
-        width: 100%;
-        display: block;
-        padding: 20px;
-        box-sizing: border-box;
-
-        & h1 {
-          font-size: 40px;
-          font-family: 'Avenir-Roman';
-          color: #ffd700;
-          font-weight: 400;
-          margin-top: 10rem;
-          position: relative;
-          margin-bottom: 40px;
-          left: -10px;
-        }
-
-      }
-    }
-
-    &.portfolio-page {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-
-      h1.page-title {
-        margin-left: 20px;
-        margin-top: 20px;
-      }
-
-      .image-box {
-        height: 200px;
-        max-width: calc(50% - 10px);
-      }
-    }
-  }
-}

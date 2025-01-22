@@ -1,50 +1,12 @@
-import { useEffect, useState } from 'react'
-import { Modal } from "react-bootstrap";
 import Loader from 'react-loaders'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-  const [showEmailSend, setShowEmailSend] = useState(false);
-  const form = useRef()
-
-  const handleCloseEmailSend = () => setShowEmailSend(false);
-  const handleShowEmailSend = () => setShowEmailSend(true);
-
-  useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-  }, [])
-
-  const sendEmail = (e) => {
-    e.preventDefault()
-
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_EMAILJS,
-        process.env.REACT_APP_TEMPLATE_EMAILJS,
-        form.current,
-        process.env.REACT_APP_FORM_CURRENT
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
   return (
     <>
       <div className="container contact-page">
-        <div className="text-zone">
+        {/* <div className="text-zone">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
@@ -98,19 +60,19 @@ const Contact = () => {
               </Modal>
             </form>
           </div>
-        </div>
+        </div> */}
         <div className="info-map">
-          Luis Gutierrez,
+          Elephant Group
           <br />
-          Santiago de Chile,
+          Viña del Mar, Chile
           <br />
-          <span>agutierrezwong@gmail.com</span>
+          <span>contacto@elephantgroup.cl</span>
         </div>
         <div className="map-wrap">
-          <MapContainer center={[-33.4365900, -70.6841300]} zoom={16}>
+          <MapContainer center={[-33.011637, -71.545505]} zoom={16}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[-33.4365900, -70.6841300]}>
-              <Popup>Aquí vive Luis, invítame un cafe :)</Popup>
+            <Marker position={[-33.011637, -71.545505]}>
+              <Popup>Elephant Group</Popup>
             </Marker>
           </MapContainer>
         </div>
