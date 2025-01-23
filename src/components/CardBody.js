@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { GiRolledCloth } from 'react-icons/gi'
 import { TfiEmail } from 'react-icons/tfi'
-import { Link } from 'react-router-dom'
 const catalogoPDF = `${process.env.PUBLIC_URL}/catalogo_impresion.pdf`
 
 const CardBody = () => {
@@ -69,11 +68,7 @@ const CardBody = () => {
               </h4>
             </div>
           </a>
-          <Link
-            to="/contact"
-            className="flat-button"
-            style={{ pointerEvents: 'auto' }}
-          >
+          <a href="mailto:contacto@elephantgroup.cl" className="flat-button">
             <div className="ico">
               <TfiEmail />
             </div>
@@ -85,7 +80,7 @@ const CardBody = () => {
                 <b>ESCRÍBENOS TUS CONSULTAS</b>
               </h4>
             </div>
-          </Link>
+          </a>
           <a
             href={catalogoPDF}
             className="flat-button"

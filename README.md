@@ -1,4 +1,4 @@
-# Luis Gutierrez Portafolio Website
+# Elephant Group Website (Short Landing for Mobile)
 
 ## Elaborado con
 
@@ -10,8 +10,6 @@ Elaborado con las siguientes tecnologías.
 - CSS3
 - Sass
 - VsCode
-- Netlify
-- Emailjs
 
 ## Características
 

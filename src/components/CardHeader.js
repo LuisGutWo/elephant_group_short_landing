@@ -13,7 +13,7 @@ export const CardHeader = () => {
           <br />
           <em>¡Contáctanos y conoce nuestros servicios!</em>
           <br />
-          <img src={LogoTitle} alt="Logo Elephant Group" />
+          <img src={LogoTitle} alt="Logo Elephant Group" width="200" height="100" />
           <br />
           <em>Letreros, señaleticas y adhesivos hechos a medida,</em>
           <br />
