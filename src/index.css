@@ -3,12 +3,14 @@ html {
 }
 
 body {
-  margin: 0;
+  margin-top: 0.8rem;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  font: 300 11px/1.4 'Avenir-Roman', sans-serif;
-  color: #fff;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.4;
+  font-family: 'Avenir-Roman', sans-serif;
+  font: 300 1.1rem/1.4 'Avenir-Roman', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #131313;

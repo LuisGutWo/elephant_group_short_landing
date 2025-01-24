@@ -1,7 +1,7 @@
 $primary-color: #d0941c;
 
 @import '~loaders.css/src/animations/line-scale-pulse-out.scss';
-@import 'animate.css';
+@import '~animate.css/animate.css';
 @import '~bootstrap/scss/bootstrap';
 
 @keyframes move {
@@ -10,28 +10,14 @@ $primary-color: #d0941c;
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
 
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2'),
-    url('./assets/fonts/LaBelleAurore.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
-    url('./assets/fonts/CoolveticaRg-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  to {
+    opacity: 0;
+  }
 }
 
 @font-face {
@@ -39,17 +25,6 @@ $primary-color: #d0941c;
   src: url('./assets/fonts/Avenir-Roman.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Avenir';
-  src: url('./assets/fonts/Avenir.ttc') format('ttc');
-  font-weight: normal;
-  font-style: normal;
-}
-
-input,
-textarea {
-  font-family: 'Avenir-Roman', sans-serif;
 }
 
 .loader-hidden {
@@ -61,7 +36,6 @@ textarea {
   justify-content: center;
   align-items: center;
   position: absolute;
-  padding-left: 6.8rem;
   left: 0;
   right: 0;
   margin: 0;

@@ -1,34 +1,99 @@
 import React from 'react'
-import { PiPhoneCallFill } from 'react-icons/pi'
-import { HiMiniMapPin } from 'react-icons/hi2'
-
-const PHONE_NUMBER = "+56951631370";
+const PHONE_NUMBER = '+56951631370'
 
 const CardFooter = () => {
+  const phoneSvg = (
+    <svg
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 0 100 100"
+    >
+      <g id="ur0oa6_00000120538085863881019850000014970482331229160370_">
+        <g>
+          <g>
+            <path
+              class="st0"
+              d="M0,27.3c0.2-0.7,0.3-1.5,0.5-2.2c0.5-2,1.4-3.7,2.8-5.2c2.6-2.7,5.3-5.3,8-7.9c2.2-2.1,4.8-3.2,7.8-1.9
+          c1.1,0.5,2.2,1.3,3.1,2.1c3.8,3.7,7.5,7.5,11.3,11.2c1.8,1.8,3.1,3.9,2.7,6.6c-0.3,2-1.4,3.5-2.7,4.8c-2.2,2.2-4.4,4.4-6.6,6.6
+          c-1.1,1.1-1.2,1.4-0.5,2.9c2.5,5.6,6.4,10.3,10.5,14.8c4.1,4.4,8.6,8.4,13.7,11.6c1.8,1.1,3.7,2,5.6,3c0.9,0.5,1.5,0.1,2.1-0.5
+          c2.3-2.3,4.6-4.7,7-7c1.3-1.3,2.8-2.4,4.8-2.6c1.9-0.2,3.6,0.3,5.1,1.5c0.5,0.4,1,0.8,1.5,1.3c3.7,3.7,7.4,7.3,11,11.1
+          c0.9,0.9,1.8,2,2.3,3.2c1.1,2.4,0.7,4.9-1,6.8c-2.9,3.2-6,6.4-9.2,9.3c-2.9,2.7-6.6,3.2-10.4,2.9c-6.5-0.5-12.5-2.7-18.3-5.6
+          C41.8,89.8,33.5,84.1,26.2,77c-10.1-9.9-18.3-21-23.3-34.3c-1.3-3.4-2.4-6.9-2.7-10.5c0-0.2-0.1-0.3-0.2-0.4
+          C0,30.2,0,28.8,0,27.3z"
+            />
+            <path
+              class="st0"
+              d="M52.2,0c2.2,0.5,4.5,1,6.7,1.6c10.3,2.8,19.1,8.2,26.4,15.9c6.7,7.1,11.2,15.4,13.8,24.8
+          c0.2,0.8,0.3,1.5,0.5,2.3c0.2,0.7,0.3,1.5,0.5,2.4c-2.5,0.4-5,0.9-7.5,1.3c-5.3-22.5-19.2-36-41.9-40.7c0.3-2.4,0.7-5,1-7.5
+          C51.8,0,52,0,52.2,0z"
+            />
+            <path
+              class="st0"
+              d="M49.5,27.6c0.3-2.5,0.7-5,1-7.5c13.8,1.4,26.8,13.2,29.1,28.2c-2.5,0.4-5,0.9-7.5,1.3
+          C69.3,37.4,61.8,30.1,49.5,27.6z"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  )
+
+  const locationSvg = (
+    <svg
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 0 100 112"
+    >
+      <g id="oqpchx_00000146501361660319314480000007373522097900727430_">
+        <g>
+          <path
+            class="st0"
+            d="M47.5,0c2.3,0.4,4.5,0.6,6.8,1.1C71.1,4.9,85,19.4,88.2,36.3c1.3,7.3,0.3,14.5-2,21.5
+			c-2.7,8.2-7,15.5-12,22.5c-7,9.7-15.1,18.4-23.5,26.9c-1.4,1.4-2.8,2.8-4.2,4.2c-1.3,1.3-2.7,1.3-4.1,0
+			c-9-8.9-17.8-17.9-25.5-28.1C11,75.4,5.8,67.2,2.7,57.8c-3.1-9.3-3.9-18.7-0.2-27.9c6.3-15.8,17.7-26,34.7-29.2
+			C38.5,0.4,40,0.2,41.4,0C43.4,0,45.4,0,47.5,0z M44.3,105.9c0.3-0.2,0.4-0.2,0.4-0.3c8.1-8.2,16.1-16.4,23.1-25.6
+			c5.5-7.3,10.3-15,13.3-23.7c2.3-6.9,3.2-13.9,1.5-21.1c-1.6-6.6-4.9-12.1-9.5-17C63.2,7.5,51.1,3.4,36.9,6
+			c-9.5,1.7-17.1,6.9-23.1,14.4C6.7,29.1,4,38.9,6,49.9c1.4,7.6,4.7,14.4,8.7,20.9c5,8.1,11,15.4,17.4,22.4
+			C36.1,97.5,40.2,101.7,44.3,105.9z"
+          />
+          <path
+            class="st0"
+            d="M44.5,26.7c10.7,0,19.3,8.7,19.3,19.3c0,10.7-8.7,19.3-19.4,19.3c-10.6,0-19.2-8.7-19.2-19.4
+			C25.1,35.3,33.8,26.7,44.5,26.7z M44.5,32c-7.8,0-14.1,6.2-14.1,13.9c0,7.8,6.2,14.2,13.9,14.2c7.8,0,14.1-6.2,14.2-14
+			C58.5,38.3,52.3,32,44.5,32z"
+          />
+        </g>
+      </g>
+    </svg>
+  )
+
   return (
     <>
       <article className="buttons-footer-zone animate__animated animate__fadeIn">
         <div className="buttons-border-second-zone m-0 d-flex justify-content-center flex-row align-items-center animate__animated animate__fadeIn">
           <a href={`tel:${PHONE_NUMBER}`} className="flat-button-footer">
-            <div className="ico">
-              <PiPhoneCallFill />
-            </div>
+            <div className="ico">{phoneSvg}</div>
             <div className="text-inner-button-footer">
-              <h4>
-                <b>LLÁMANOS</b>
-              </h4>
+              <h4>LLÁMANOS</h4>
             </div>
           </a>
         </div>
         <div className="buttons-border-second-zone m-0 d-flex justify-content-center flex-row align-items-center animate__animated animate__fadeIn">
-          <a href="https://maps.app.goo.gl/pPMYMQnn36QWaSK26" target="_blank" rel="noopener noreferrer" className="flat-button-footer">
-            <div className="ico">
-              <HiMiniMapPin />
-            </div>
+          <a
+            href="https://maps.app.goo.gl/pPMYMQnn36QWaSK26"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flat-button-footer"
+          >
+            <div className="ico">{locationSvg}</div>
             <div className="text-inner-button-footer">
-              <h4>
-                <b>UBICACIÓN</b>
-              </h4>
+              <h4>UBICACIÓN</h4>
             </div>
           </a>
         </div>
