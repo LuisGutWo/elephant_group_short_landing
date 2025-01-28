@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
-const catalogoPDF = `${process.env.PUBLIC_URL}/catalogo_impresion.pdf`
+const catalogoPDF = `${process.env.PUBLIC_URL || ''}/catalogo_impresion.pdf`
 
 const CardBody = () => {
   const mailingSvg = (
@@ -72,20 +72,22 @@ const CardBody = () => {
       />
     </svg>
   )
-  
 
   return (
     <>
-      <article className="buttons-border-zone animate__animated animate__fadeIn">
+      <article className="buttons-border-zone animate__animated animate__fadeIn animate__delay-1s">
         <div className="text-zone animate__animated animate__fadeIn">
           <a
             rel="noreferrer"
-            href={
-              typeof window !== 'undefined' &&
-              window.location.href !== undefined
-                ? 'https://api.whatsapp.com/send?phone=56951631370&text=Hola'
-                : ''
-            }
+            href={(() => {
+              if (
+                typeof window !== 'undefined' &&
+                window.location.href !== undefined
+              ) {
+                return `https://api.whatsapp.com/send?phone=56951631370&text=¡Hola!%20Estoy%20interesado%20en%20más%20información%20sobre%20los%20servicios%20de%20Elephant%20Group.%20Me%20gustaría%20cotizar:%20-letreros,%20-señaléticas,%20-adhesivos,%20otros%20servicios.%20¿Podrías%20ayudarme?`
+              }
+              return ''
+            })()}
             target="_blank"
             className="flat-button"
             style={
@@ -136,7 +138,7 @@ const CardBody = () => {
               </h4>
             </div>
           </a>
-          <a href="mailto:contacto@elephantgroup.cl" className="flat-button">
+          <a href="mailto:contacto@elephantgroup.cl" className="flat-button" rel="noopener noreferrer">
             <div className="ico">{mailingSvg}</div>
             <div className="text-inner-button">
               <h2 className="text animate__animated animate__fadeIn">
