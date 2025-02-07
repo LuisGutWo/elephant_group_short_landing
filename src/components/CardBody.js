@@ -134,7 +134,7 @@ const CardBody = () => {
                 INSTAGRAM
               </h2>
               <h4>
-                <b>MIRA NUESTROS TRABAJOS RECIENTES</b>
+                <b>MIRA NUESTROS TRABAJOS</b>
               </h4>
             </div>
           </a>
